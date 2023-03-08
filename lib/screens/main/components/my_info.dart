@@ -14,17 +14,27 @@ class MyInfo extends StatelessWidget {
         child: Column(
           children: [
             Spacer(flex: 2),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("assets/images/IMG_7344.jpg"),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.white12),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.download,
+                  size: 40,
+                ),
+              ),
             ),
             Spacer(),
             Text(
-              "Abu Anwar",
+              "William Costa",
               style: Theme.of(context).textTheme.subtitle2,
             ),
             Text(
-              "Flutter Developer & Founder of \n The Flutter Way",
+              "Master's degree in Computer Science and Engineering",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w200,

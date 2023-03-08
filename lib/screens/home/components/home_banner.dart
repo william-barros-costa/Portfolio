@@ -28,7 +28,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Discover my Amazing \nArt Space!",
+                  "Explore my personal \nPortfolio!",
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold,
@@ -53,7 +53,7 @@ class HomeBanner extends StatelessWidget {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      "EXPLORE NOW",
+                      "CONTACT ME!",
                       style: TextStyle(color: darkColor),
                     ),
                   ),
@@ -82,7 +82,6 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("I build "),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
@@ -103,17 +102,14 @@ class AnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
+      pause: Duration(seconds: 5),
       animatedTexts: [
         TyperAnimatedText(
-          "responsive web and mobile app.",
+          "Welcome to my responsive web and mobile app Portfolio!",
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "complete e-Commerce app UI.",
-          speed: Duration(milliseconds: 60),
-        ),
-        TyperAnimatedText(
-          "Chat app with dark and light theme.",
+          "Feel free to contact me :D",
           speed: Duration(milliseconds: 60),
         ),
       ],

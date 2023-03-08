@@ -27,15 +27,15 @@ class SideMenu extends StatelessWidget {
                   children: [
                     AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "Portugal",
                     ),
                     AreaInfoText(
                       title: "City",
-                      text: "Dhaka",
+                      text: "Lisbon",
                     ),
                     AreaInfoText(
-                      title: "Age",
-                      text: "22",
+                      title: "Date of Birth",
+                      text: "19/09/1997",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -43,26 +43,6 @@ class SideMenu extends StatelessWidget {
                     Knowledges(),
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
-                    TextButton(
-                      onPressed: () {},
-                      child: FittedBox(
-                        child: Row(
-                          children: [
-                            Text(
-                              "DOWNLOAD CV",
-                              style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding / 2),
-                            SvgPicture.asset("assets/icons/download.svg")
-                          ],
-                        ),
-                      ),
-                    ),
                     Container(
                       margin: EdgeInsets.only(top: defaultPadding),
                       color: Color(0xFF24242E),
@@ -70,14 +50,17 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
+                            splashRadius: 1,
                             onPressed: () {},
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
+                            splashRadius: 1,
                             onPressed: () {},
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
+                            splashRadius: 1,
                             onPressed: () {},
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),

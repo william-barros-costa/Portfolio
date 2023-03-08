@@ -12,7 +12,6 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // We hide the appbar on desktop
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
@@ -27,21 +26,22 @@ class MainScreen extends StatelessWidget {
               ),
             ),
       drawer: SideMenu(),
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints(maxWidth: maxWidth),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (Responsive.isDesktop(context))
-                Expanded(
-                  flex: 2,
-                  child: SideMenu(),
-                ),
-              SizedBox(width: defaultPadding),
+      body: Container(
+        // constraints: BoxConstraints(maxWidth: maxWidth),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (Responsive.isDesktop(context))
               Expanded(
-                flex: 7,
-                child: SingleChildScrollView(
+                flex: 2,
+                child: SideMenu(),
+              ),
+            SizedBox(width: defaultPadding),
+            Expanded(
+              flex: 7,
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: defaultPadding),
                   child: Column(
                     children: [
                       ...children,
@@ -50,8 +50,8 @@ class MainScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
