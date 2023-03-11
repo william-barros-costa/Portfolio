@@ -43,6 +43,7 @@ class MainScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(right: defaultPadding),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ...children,
                       // our footer

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -43,31 +42,6 @@ class SideMenu extends StatelessWidget {
                     Knowledges(),
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
-                    Container(
-                      margin: EdgeInsets.only(top: defaultPadding),
-                      color: Color(0xFF24242E),
-                      child: Row(
-                        children: [
-                          Spacer(),
-                          IconButton(
-                            splashRadius: 1,
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/linkedin.svg"),
-                          ),
-                          IconButton(
-                            splashRadius: 1,
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/github.svg"),
-                          ),
-                          IconButton(
-                            splashRadius: 1,
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
-                          ),
-                          Spacer(),
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -77,4 +51,6 @@ class SideMenu extends StatelessWidget {
       ),
     );
   }
+
+  
 }

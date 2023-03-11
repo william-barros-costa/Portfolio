@@ -13,8 +13,37 @@ class RecommendationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {
+          showDialog(
+            context: context,
+            builder: (context) => Dialog(
+              backgroundColor: secondaryColor,
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.height * 0.8,
+                child: ListView(children: [
+                  recommendationCardWidget(context,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      maxLines: 200,
+                      spacer: false
+                      )
+                ]),
+              ),
+            ),
+          );
+        },
+        child: recommendationCardWidget(context, open: false),
+      ),
+    );
+  }
+
+  Container recommendationCardWidget(BuildContext context,
+      {double width = 400, int? maxLines = 4, bool open = true, bool spacer = true}) {
+    Widget delimeter = spacer ? Spacer() : SizedBox(height: defaultPadding);
     return Container(
-      width: 400,
       padding: EdgeInsets.all(defaultPadding),
       color: secondaryColor,
       child: Column(
@@ -25,13 +54,21 @@ class RecommendationCard extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
           Text(recommendation.source!),
+          delimeter,
           const SizedBox(height: defaultPadding),
           Text(
             recommendation.text!,
-            maxLines: 4,
+            maxLines: maxLines,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
-          )
+          ),
+          if (open == false)
+            delimeter,
+          if (open == false)
+            Text(
+              "Read More >>",
+              style: TextStyle(color: primaryColor),
+            ),
         ],
       ),
     );

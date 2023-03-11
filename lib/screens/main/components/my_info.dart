@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -41,10 +43,45 @@ class MyInfo extends StatelessWidget {
                 height: 1.5,
               ),
             ),
+            socialMediaButtons(),
             Spacer(flex: 2),
           ],
         ),
       ),
     );
   }
+
+Container socialMediaButtons() {
+    return Container(
+                    color: Color(0xFF24242E),
+                    child: Row(
+                      children: [
+                        Spacer(),
+                        IconButton(
+                          splashRadius: 1,
+                          onPressed: () {
+                            launchUrl(Uri(path: "https://www.linkedin.com/in/william-barros-costa/"));
+                          },
+                          icon: SvgPicture.asset("assets/icons/linkedin.svg"),
+                        ),
+                        IconButton(
+                          splashRadius: 1,
+                          onPressed: () {
+                            launchUrl(Uri(path: "https://github.com/alTaWBC"));
+                          },
+                          icon: SvgPicture.asset("assets/icons/github.svg"),
+                        ),
+                        IconButton(
+                          splashRadius: 1,
+                          onPressed: () {
+                          launchUrl(Uri(path: "https://github.com/william-barros-costa"));
+                          },
+                          icon: SvgPicture.asset("assets/icons/github.svg"),
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                  );
+  }
+
 }

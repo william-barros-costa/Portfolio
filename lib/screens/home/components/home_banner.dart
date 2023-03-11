@@ -79,7 +79,7 @@ class MyBuildAnimatedText extends StatelessWidget {
       maxLines: 1,
       child: Row(
         children: [
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+          // if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
           Responsive.isMobile(context)
@@ -87,7 +87,7 @@ class MyBuildAnimatedText extends StatelessWidget {
               : AnimatedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+          // if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
         ],
       ),
     );
@@ -103,9 +103,10 @@ class AnimatedText extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedTextKit(
       pause: Duration(seconds: 5),
+
       animatedTexts: [
         TyperAnimatedText(
-          "Welcome to my responsive web and mobile app Portfolio!",
+          "Welcome to my responsive Portfolio!",
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
@@ -138,3 +139,4 @@ class FlutterCodedText extends StatelessWidget {
     );
   }
 }
+

@@ -4,29 +4,17 @@ class Recommendation {
   Recommendation({this.name, this.source, this.text});
 }
 
-final List<Recommendation> demo_recommendations = [
+final List<Recommendation> demoRecommendations = [
   Recommendation(
-    name: "Kolapo Obanewa",
-    source: "Linkedin",
+    name: "Filipe Godinho, 2019",
+    source: "GMV",
     text:
-        "I have had the pleasure of working with Anwar on two flutter projects and what strikes me the most about his work is his ability to write clean and reusable codes with best practices. He is hardworking and makes it so easy to transcribe ideas into beautiful and testable flutter apps. He is a Flutter/Dart gem and has my highest recommendation",
+        "Como Gestor de Projeto no departamento Secure e-Solutions da empresa GMVIS Skysoft S.A. e coordenador do estágio curricular de William Costa, venho, por este meio, apresentar a minha recomendação profissional face ao trabalho que o William desempenhou nos 6 meses em que tive a oportunidade de trabalhar diretamente com ele.\n\nEmbora a sua curta experiência profissional na altura que iniciou o estágio curricular, constatei que o William tinha a capacidade de executar o trabalho dele com excelente qualidade sem ser necessária qualquer supervisão da minha parte. Durante o estágio, o William foi capaz de investigar uma tecnologia que não fazia parte das valências da empresa, estudar todo um processo de negócio e implementar e testar uma aplicação com base nessa tecnologia e nesse negócio com excelentes resultados. Não mostrou qualquer receio a nível técnico do projeto em que teve envolvido, sendo que muitas vezes se mostrou disponível para desempenhar tarefas fora das suas funções noutros projetos da empresa. A nível de personalidade, integrou-se perfeitamente com a equipa do departamento, sem ter qualquer receio de pedir auxílio quando necessário ou mesmo de o dar quando não seria expectável.\n\nPosto isto, e sem ter mais outro assunto a tratar, quero apenas deixar a minha recomendação profissional pelo William, que considero ser uma mais valia para qualquer organização que o venha a contratar.",
   ),
   Recommendation(
-    name: "Reza Shahbazi",
-    source: "Linkedin",
+    name: "Nuno Marques, 2020",
+    source: "FCT NOVA",
     text:
-        "Abu is great asset for any organization. It's a true pleasure working with him at TakeIn. His flutter skill is amazing as well as his professionalism and being a good team player. Abu's problem solving skill is also one of his great skills.",
-  ),
-  Recommendation(
-    name: "Diadem",
-    source: "YouTube",
-    text:
-        "I like your way you doing your project and you taught us. After I watch this I like and hit the subscribe button and then watch your video playlist one by one!! Within three hours, I learned a lot! I share your channel in my college WhatsApp group!",
-  ),
-  Recommendation(
-    name: "Roshan Shetty",
-    source: "YouTube",
-    text:
-        "Very straightforward, professional and also the best flutter videos in the youtube! It will be great if you add some comments to your steps with 0.5 seconds pause before implementing this step. By meaning of steps, I mean not the basic, but structural steps, like 10-20 steps per video. However, thank you very much!",
+        "I had most frequent contact with William Costa while supervising him during scholarship and master thesis work.\n\nWilliam applied to a scholarship, whose main goal was to help teachers in their course subjects and was assigned to give two weekly classes to the course subject I was responsible for. After this semester William started doing his thesis under my coordination in the framework of the project.\n\nWilliam can work and express himself well and can easily conceptualize the idea formation I provide to him while asking questions when needed.\n\nWilliam can adapt to the team's needs working well in different environments, and so was proven during his graduation and masters in NOVA FCT computer science course over the last 5 years, as William was able to successfully do all group projects in a team while achieving good grades. \n\nWilliam is proactive in his work, can easily adapt to new scenarios, and always tries to find solutions to his problems. Due to this and his ability to express himself well in both Portuguese and English, he can work effectively with other people to achieve a common goal. William's academic curriculum in our computer science course includes very high grades that confirm he is able to distinguish himself positively from his peers.\n\nWilliam is currently doing his thesis under my supervision so I would like to share some of his work. This thesis' goal is to analyze and improve a machine learning algorithm's (a Convolution Neural Network) ability to classify speech samples as correct or incorrect. This classifier is used in a platform designed to help speech therapists with children needing distortion correction of fricative consonants in European Portuguese. To do this, William is working with another machine learning algorithm (an Ubiquitous Self-Organizing Map) to study both the sound productions and the Convolutional Neural Network. During this thesis, William will be able to acquire knowledge and expertise in deep learning and neural network training. He will use several conjoined tools used in this project, namely Python + Keras + Tensorflow, Unity, C++, and Java that should improve William proficiency in machine learning, sound recording and processing, data collection using servers, data processing, mobile game development, and experimental work.",
   ),
 ];
